@@ -1,0 +1,17 @@
+<div class="container text-center center">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6-col-sm-offset-3 col-md-4 col-md-offset-4">
+
+      <h2><%= @task.name %></h2>
+      <p><%= @task.done ? "Done - Good job" : "TO DO!!!!" %></p>
+
+      <%= link_to "Back to list", tasks_path %>
+      <%= link_to "Edit", edit_task_path %>
+      <%= link_to "Delete", task_path(@task),
+            method: :delete,
+            data: { confirm: "Are you sure?" }%>
+
+    </div>
+  </div>
+</div>
+
